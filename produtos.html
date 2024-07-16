@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/produtos.css">
+    <link rel="stylesheet" href="./assets/css/Responsivo.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" target="_blank"><img class="logo" src="assets/images/logo.png" alt="logo do alurageek"></a>
+
+
+        <div class="search-box">
+            <input class="input_search" type="text" placeholder="Que Desea Encontrar"
+            >
+           <a href="#" class="search-btn" onclick="redirecionar()">
+            <img src="assets/images/lupa1.png" alt="lupa" height="20" width="20">
+           </a>
+        </div>
+        
+        <button class="btn btn_header">Menu </button>
+    </header>
+        <section class="section_produtos">
+            <form class="form" data-form>
+                <h2 class="titulo_padrao">Adicionar nuevo producto</h2>
+
+                <div class="input-container input_file">
+                    <div class="picture__input">
+                        <img src="assets/images/icone-d-image-grise.png" alt="icone de imagem" class="img_input">
+                        <label tabIndex="0" class="picture">
+                            URL de Imagen
+                            <input type="text" class="picture_input" id="picture__input" data-image required>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input class="input" minlength="" name="nomeProdutos" type="text" placeholder="Nombre del producto"
+                    data-tipo="nomeProdutos"  required data-nome>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-container">
+                    <input pattern="[0-9]*" class="input" name="precoProdutos" type="number" placeholder="Precio del producto" data-tipo="preco" required data-price>
+                    <span class="error"></span>
+                </div>
+
+                <input class="btn btn_produtos" type="submit" value="Adicionar produto">
+            </form>
+        </section>
+        <section class="contato">
+        <div class="info">
+            <img class="logo" src="assets/images/logo.png" alt="logo do alurageek">
+            <ul class="lista_contato">
+                <li class="lista_item">Quienes Somos</li>
+                <li class="lista_item">Política de privacidad</li>
+                <li class="lista_item">Nuestras Tiendas</li>
+                <li class="lista_item">Anunciese aqui</li>
+            </ul>
+        </div>
+        <form class="fale_conosco" action="#">
+            <h2 class="titulo_padrao">Hable con Nosotros</h2>
+            <div class="input-container">
+                <input class="input_contato" name="Nombre" type="text" placeholder="Nombre" minlength="40" data-tipo="Nombre" required>
+                <span class="error"></span>
+            </div>
+            <div class="input-container">
+                <input class="textarea_contato" name="mensagem" id="mensagem" data-tipo="mensagem" minlength="120" placeholder="Escriba su Mensaje" required>
+                <span class="error"></span>
+            </div>
+            <input class="btn btn_contato" type="submit" value="Enviar menssaje">
+        </form>
+        </section>
+        <footer class="rodape">
+            <p>Desarrollado por  <a class="link" href="https://ingridssilveira.github.io/IngridSouza/">Douglas Hernandez</a> 🔥</p>
+        </footer>
+        <script src="js/app.js" type="module"></script>
+        <script src="js/barraPesquisa.js"></script>
+        <script src="js/services/produtos.js"></script>     
+</body>
+</html>
